@@ -1,0 +1,18 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"  access="global">	
+    
+    <aura:registerEvent name="CreateNewStepTestCase" type="c:CreateNewStepTestCase"/>
+    
+    <div class="slds-page-header" style="margin-bottom: 10px;">  
+        <div class="slds-grid">    
+            <div class="slds-col slds-has-flexi-truncate">      
+                <p class="slds-text-title_caps slds-line-height_reset">Steps</p>
+                <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"  title="My Contacts">Test Case Related Steps</h1>      
+            </div >
+            <lightning:icon onclick="{!c.CreateNewStepTestCase}" iconName="utility:new" class="slds-icon_container slds-icon_container_circle slds-icon-action-new hover-pointer slds-float--right" size="small" alternativeText="icon"/>
+        </div>
+        <!-- / LAYOUT GRID -->
+        <!-- PAGE HEADER DETAIL ROW -->
+        <!-- / PAGE HEADER DETAIL ROW -->
+    </div>
+    <!-- / PAGE HEADER -->	
+</aura:component>

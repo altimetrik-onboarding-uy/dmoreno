@@ -1,0 +1,17 @@
+<aura:component controller="RetreiveProjects" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="projectList" type="Project__c[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>   
+    
+    <!-- BODY -->
+    <lightning:layout horizontalAlign="centre" multipleRows="true">  
+        <aura:iteration items="{!v.projectList}" var="records" >
+            
+            <a href="{!'/lightning/r/Project__c/'+ records.Id +'/view'}"><div class="slds-m-around_x-small">
+                <c:ProjectTile projectName="{!records.Name}" projectId="{!records.Id}"/>
+                <br/>
+                </div></a>
+            
+        </aura:iteration>
+    </lightning:layout>
+    
+</aura:component>

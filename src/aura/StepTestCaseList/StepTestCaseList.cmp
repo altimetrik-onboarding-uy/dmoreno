@@ -1,0 +1,17 @@
+<aura:component controller="RetreiveRelatedSteps" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"  access="global">
+    
+    <aura:attribute name="StepTestCaseList" type="Test_Case_Step__c[]"/>
+    <aura:attribute name="recordId" type="string"/>    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>    
+    <aura:handler name="CreateNewStepTestCase" event="c:CreateNewStepTestCase" action="{!c.CreateNewStep}"/>
+    <aura:handler name="StepListEvent" event="c:StepListEvent" action="{!c.onDrop}"/>
+ 
+    <c:StepListHeader/>    
+    <aura:iteration items="{!v.StepTestCaseList}" var="item" indexVar="index">
+        <div id="{!index}">
+            <c:StepTestCaseTile stepTestCase="{!item}" index="{!index}"/>
+            <br/>
+        </div>
+    </aura:iteration>	
+    
+</aura:component>

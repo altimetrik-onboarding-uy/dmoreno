@@ -1,0 +1,33 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"  access="global">
+    
+    <aura:attribute name="stepTestCase" type="Test_Case_Step__c"/>    
+    <aura:attribute name="index" type="Integer"/>
+    <aura:registerEvent name="StepListEvent" type="c:StepListEvent"/>
+    
+    <div class="demo-only"  id="{!v.index}" draggable="true" ondragstart="{!c.onDragStart}" ondragover="{!c.allowDrop}" ondrop="{!c.onDrop}" ondragenter="{!c.allowDrop}" style="width: auto;">
+        <ul class="slds-has-dividers_around-space" id="{!v.index}">
+            <li class="slds-item" id="{!v.index}">                 
+                <div class="custom-div-icon">
+                    <div class="slds-media__figure slds-icon-custom forceEntityIcon" style="background-color: #e3d067" data-aura-rendered-by="1192:0" data-aura-class="forceEntityIcon">
+                        <span data-aura-rendered-by="1195:0" class="uiImage" data-aura-class="uiImage">
+                            <img data-aura-rendered-by="1193:0" src="https://onboardingproj-dev-ed.my.salesforce.com/img/icon/t4v35/custom/custom59_120.png" class="icon " alt="Test Case Step" title="Test Case Step"/>
+                        </span>
+                    </div>        
+                </div>
+                <article class="slds-tile slds-tile_board article-custom">
+                    <h3 class="slds-tile__title slds-truncate"><u>Name</u>: </h3>
+                    <div class="slds-tile__detail">
+                        <p class="slds-text-heading_medium" onclick="{!c.editStepTestCase}">
+                            <a href="javascript:void(0)" class="textLink-custom">{!v.stepTestCase.Name}</a>
+                        </p>
+                        <p class="slds-truncate text-custom"><u>Description</u>: </p>
+                        <p class="slds-truncate" >{!v.stepTestCase.Description__c}</p>
+                        <p class="slds-truncate"><u>Expected Result</u>: </p>
+                        <p class="slds-truncate" >{!v.stepTestCase.Expected_Result__c}</p>
+                    </div>
+                </article>
+            </li>    
+        </ul>
+    </div>
+    
+</aura:component>

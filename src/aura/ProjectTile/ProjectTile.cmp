@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">
+    
+    <aura:attribute name="projectName" type="String"/>
+    <aura:attribute name="projectId" type="String"/>
+    
+    
+    <div class="demo-only" style="width: 150px; height: 150px">
+        <ul class="slds-has-dividers_around-space" style="width: 150px; height: 150px">
+            <li class="slds-item custom-background slds-text-heading_medium slds-align_absolute-center" style="width: 150px; height: 150px">
+                {!v.projectName}
+            </li>    
+        </ul>
+    </div>
+    
+</aura:component>

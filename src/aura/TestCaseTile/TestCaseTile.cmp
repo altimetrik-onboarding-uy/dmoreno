@@ -1,0 +1,37 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global">        
+    
+    <aura:attribute name="testCase" type="Test_Case__c"/>          
+    <aura:registerEvent name="deleteTestCaseEvent" type="c:deleteTestCase"/>
+    <aura:registerEvent name="updateTestCaseViewEvent" type="c:UpdateTestCaseView"/>
+    <aura:handler name="handleEdit" event="force:editRecord" action="{!c.updateViewList}" />
+    <aura:handler name="onSaveSuccess" event="force:recordSaveSuccess" action="{!c.updateViewList}"/>        
+   
+    
+    
+    
+    <div class="demo-only" style="width: auto;">
+        
+        <ul class="slds-has-dividers_around-space">
+            <li class="slds-item custom-background">
+                <article class="slds-tile slds-tile_board">          
+                    <div class="slds-tile__detail">
+                        <div class="hover-pointer" > 
+                            <lightning:icon onclick="{!c.deletes}" iconName="utility:delete" class="slds-icon_container slds-icon_container_circle slds-icon-action-delete slds-float--right" aria-hidden="true" size="small" alternativeText="icon"/>                  
+                            <lightning:icon onclick="{!c.editTestCase}" iconName="utility:edit" class="slds-icon_container slds-icon_container_circle slds-icon-action-edit slds-float--right" size="small" alternativeText="icon"/>
+                            <lightning:icon onclick="{!c.newTestCase}" iconName="utility:new" class="slds-icon_container slds-icon_container_circle slds-icon-action-new slds-float--right" size="small" alternativeText="icon"/>
+                        </div>
+                        <p class="slds-text-heading_medium">Name: 
+                            <p class="slds-text-heading_small custom-display">
+                                <a href="{!'/lightning/r/Test_Case__c/' + v.testCase.Id +'/view'}">{!v.testCase.Name}</a>
+                            </p>
+                        </p>            
+                        <p class="slds-text-heading_medium">Title:
+                            <p class="slds-text-heading_small custom-display">{!v.testCase.Title__c}</p>
+                        </p>              
+                    </div>
+                </article>
+            </li>    
+        </ul> 
+        
+    </div>	
+</aura:component>

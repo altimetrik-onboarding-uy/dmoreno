@@ -1,0 +1,3 @@
+<aura:event type="COMPONENT">
+    <aura:attribute name="testCase" type="Test_Case__c"/>    
+</aura:event>
