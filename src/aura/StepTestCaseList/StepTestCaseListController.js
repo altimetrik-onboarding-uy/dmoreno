@@ -35,8 +35,9 @@
         steps.splice(startIndex, 1);
         steps.splice(dropIndex, 0, step);        
         component.set("v.StepTestCaseList", steps);
-        }
-         console.log('Start Id '+ startIndex);
-         console.log('Drop Id ' +  dropIndex);
+        var action = component.get("c.SetIndexInStep");
+        action.setParams({stepList :steps});
+        $A.enqueueAction(action);   
+        }       
     }  
 })

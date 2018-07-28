@@ -1,0 +1,7 @@
+Hi, 
+<br/>
+<br/>
+<p>The project {!Project__c.Name} changed status to {!Project__c.Status__c}</p>
+<br/><br/>
+Regards.
+<br/>

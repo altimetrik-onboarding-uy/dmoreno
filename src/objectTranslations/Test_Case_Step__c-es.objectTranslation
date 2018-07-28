@@ -17,9 +17,20 @@
         <name>Expected_Result__c</name>
     </fields>
     <fields>
+        <label><!-- Index --></label>
+        <name>Index__c</name>
+    </fields>
+    <fields>
         <label><!-- Test Case --></label>
         <name>Test_Case__c</name>
         <relationshipLabel><!-- Test Cases Steps --></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
+    <layouts>
+        <layout>Test Case Story Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
 </CustomObjectTranslation>

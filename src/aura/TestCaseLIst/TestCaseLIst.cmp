@@ -6,7 +6,7 @@
     <aura:handler name="deleteTestCaseEvent" event="c:deleteTestCase" value="{!this}" action="{!c.deleteEvent}"/>     
     <aura:handler name="updateTestCaseViewEvent" event="c:UpdateTestCaseView" action="{!c.doInit}"/>    
     
-    <c:TestCaseListHeader/>
+    <c:TestCaseListHeader recordIdh="{!v.recordId}"/>
     <aura:iteration items="{!v.TestCaseList}" var="item">
         <c:TestCaseTile testCase="{!item}" />
         <br/>
